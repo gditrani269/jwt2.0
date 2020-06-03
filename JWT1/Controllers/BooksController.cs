@@ -10,8 +10,8 @@ namespace JWT.Controllers
     [Route("api/[controller]")]
     public class BooksController : Controller
     {
- //       [HttpGet, Authorize]
-        [HttpGet]
+        [HttpGet, Authorize]
+ //       [HttpGet]
         public IEnumerable<Book> Get()
         {
             var currentUser = HttpContext.User;
